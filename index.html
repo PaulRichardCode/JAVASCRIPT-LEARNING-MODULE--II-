@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1>LOVE COUPLES</h1>
+    <label for="text">
+      Male <input type="text" id="person1" placeholder="input name"
+    /></label>
+    <label for="person2">
+      Female <input type="text" id="person2" placeholder="input name"
+    /></label>
+    <button class="num" id="submit">submit</button>
+
+    <script>
+      const person1 = document.querySelector("#person1");
+      const person2 = document.querySelector("#person2");
+      const num = document.querySelector("#submit");
+
+      let Random = Math.random();
+      let randfloor = Math.floor(Random * 100) + 1;
+
+      num.addEventListener("click", () => {
+        if (person1.value === person2.value) {
+          return alert("you can't enter the same name");
+        } else {
+          return alert(
+            `${person1.value} and ${person2.value} has a ${randfloor}%`
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
